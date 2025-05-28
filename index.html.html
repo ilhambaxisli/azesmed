@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azesmed - Tibbi Zəli Satışı</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#0056b3',secondary:'#e63946'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .banner-image {
+            background-position: center;
+            background-size: cover;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="font-['Pacifico'] text-primary text-2xl">logo</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium cursor-pointer">Ana Səhifə</a>
+                    <a href="#products" class="text-gray-700 hover:text-primary font-medium cursor-pointer">Məhsullar</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium cursor-pointer">Haqqımızda</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium cursor-pointer">Əlaqə</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobileMenuButton" class="w-10 h-10 flex items-center justify-center cursor-pointer">
+                        <i class="ri-menu-line ri-xl text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 cursor-pointer">Ana Səhifə</a>
+                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 cursor-pointer">Məhsullar</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 cursor-pointer">Haqqımızda</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 cursor-pointer">Əlaqə</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16 pb-16">
+        <!-- Hero Banner -->
+        <section id="home" class="relative h-[500px] overflow-hidden">
+            <div class="banner-image absolute inset-0 w-full h-full" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20medical%20leeches%20for%20therapy%2C%20close-up%20view%20of%20medicinal%20leeches%20in%20a%20glass%20container%20with%20water%2C%20high-quality%20clinical%20environment%2C%20sterile%20medical%20setting%2C%20healthcare%20concept%2C%20pharmaceutical%20grade%20leeches%2C%20hirudotherapy%20treatment%2C%20clean%20and%20professional%20presentation&width=800&height=500&seq=1&orientation=landscape')"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Tibbi Zəli Satışı</h1>
+                <p class="text-xl text-white mb-8 max-w-2xl">Azərbaycanda sertifikatlı və keyfiyyətli tibbi zəlilərin rəsmi təchizatçısı</p>
+                <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 !rounded-button font-medium text-lg transition-all duration-300 cursor-pointer">İndi Sifariş Et</a>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Tibbi Zəli Müalicəsinin Faydaları</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-all duration-300">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-heart-pulse-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Qan Dövranını Yaxşılaşdırır</h3>
+                        <p class="text-gray-600">Zəli terapiyası qan dövranını stimullaşdırır və toxumalara oksigen çatdırılmasını artırır.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-all duration-300">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-medicine-bottle-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Təbii Ağrıkəsici</h3>
+                        <p class="text-gray-600">Zəlilərin ifraz etdiyi maddələr təbii ağrıkəsici təsir göstərir və iltihab proseslərini azaldır.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-all duration-300">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-virus-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">İmmun Sistemini Gücləndirir</h3>
+                        <p class="text-gray-600">Zəli terapiyası immun sisteminin fəaliyyətini yaxşılaşdırır və orqanizmin müdafiə qabiliyyətini artırır.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-all duration-300">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-mental-health-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Stress Səviyyəsini Azaldır</h3>
+                        <p class="text-gray-600">Zəli terapiyası sinir sisteminin fəaliyyətini normallaşdırır və stress səviyyəsini azaldır.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification -->
+        <section class="py-12 px-4 bg-primary/5">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Sertifikatlı Keyfiyyət</h2>
+                    <p class="text-gray-700 mb-6">Bütün tibbi zəlilərimiz beynəlxalq standartlara uyğun yetişdirilir və sertifikatlaşdırılır. Məhsullarımız Səhiyyə Nazirliyinin tələblərinə tam cavab verir.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="ri-verified-badge-line ri-lg text-primary mr-2"></i>
+                            <span class="text-sm font-medium">ISO 9001:2015</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="ri-verified-badge-line ri-lg text-primary mr-2"></i>
+                            <span class="text-sm font-medium">GMP Sertifikatı</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="ri-verified-badge-line ri-lg text-primary mr-2"></i>
+                            <span class="text-sm font-medium">Səhiyyə Nazirliyi Lisenziyası</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <img src="https://readdy.ai/api/search-image?query=Medical%20certification%20documents%20and%20quality%20control%20certificates%20for%20pharmaceutical%20products%2C%20professional%20healthcare%20documentation%2C%20official%20medical%20papers%20with%20stamps%20and%20signatures%2C%20quality%20assurance%20documents%2C%20medical%20licensing%20paperwork%2C%20clean%20and%20organized%20presentation%20on%20white%20background&width=400&height=300&seq=2&orientation=landscape" alt="Sertifikatlar" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="py-16 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-4">Məhsullarımız</h2>
+                <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Müxtəlif ölçü və növlərdə yüksək keyfiyyətli tibbi zəlilər təklif edirik. Bütün məhsullarımız steril şəraitdə saxlanılır və sertifikatlıdır.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Medical%20grade%20leeches%20in%20a%20glass%20container%20with%20water%2C%20Hirudo%20medicinalis%20species%2C%20clean%20clinical%20environment%2C%20pharmaceutical%20quality%2C%20close-up%20view%2C%20healthcare%20and%20medical%20therapy%20concept%2C%20sterile%20presentation%2C%20professional%20medical%20setting&width=400&height=300&seq=3&orientation=landscape" alt="Standart Tibbi Zəli" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Standart Tibbi Zəli</h3>
+                            <p class="text-gray-600 mb-4">Ən çox istifadə olunan tibbi zəli növü. Orta ölçülü, 2-3 sm uzunluğunda.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-primary">15 AZN / ədəd</span>
+                                <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 cursor-pointer">Səbətə əlavə et</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Large%20medicinal%20leeches%20for%20professional%20therapy%2C%20Hirudo%20verbana%20species%2C%20high-quality%20medical%20grade%20leeches%20in%20clear%20water%2C%20sterile%20medical%20container%2C%20pharmaceutical%20grade%2C%20healthcare%20treatment%2C%20professional%20medical%20setting%2C%20clean%20clinical%20environment&width=400&height=300&seq=4&orientation=landscape" alt="Premium Tibbi Zəli" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Premium Tibbi Zəli</h3>
+                            <p class="text-gray-600 mb-4">Yüksək keyfiyyətli, böyük ölçülü tibbi zəli. 3-5 sm uzunluğunda.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-primary">25 AZN / ədəd</span>
+                                <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 cursor-pointer">Səbətə əlavə et</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Small%20medicinal%20leeches%20for%20specialized%20therapy%2C%20Hirudo%20medicinalis%20species%2C%20pharmaceutical%20grade%20small%20leeches%20in%20clear%20water%2C%20sterile%20medical%20container%2C%20professional%20healthcare%20treatment%2C%20clean%20clinical%20environment%2C%20medical%20grade%20quality&width=400&height=300&seq=5&orientation=landscape" alt="Mini Tibbi Zəli" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Mini Tibbi Zəli</h3>
+                            <p class="text-gray-600 mb-4">Kiçik ölçülü, həssas bölgələr üçün ideal. 1-2 sm uzunluğunda.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-primary">12 AZN / ədəd</span>
+                                <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 cursor-pointer">Səbətə əlavə et</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Bulk%20package%20of%20medicinal%20leeches%20for%20professional%20therapy%2C%20multiple%20leeches%20in%20specialized%20container%20with%20water%2C%20pharmaceutical%20grade%2C%20healthcare%20treatment%20supplies%2C%20professional%20medical%20setting%2C%20sterile%20clinical%20environment%2C%20medical%20grade%20quality&width=400&height=300&seq=6&orientation=landscape" alt="Toplu Tibbi Zəli Paketi" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Toplu Tibbi Zəli Paketi</h3>
+                            <p class="text-gray-600 mb-4">Klinikalar üçün xüsusi paket. 10 ədəd standart ölçülü tibbi zəli.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-primary">120 AZN / paket</span>
+                                <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 cursor-pointer">Səbətə əlavə et</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Professional%20leech%20therapy%20starter%20kit%2C%20complete%20set%20with%20medicinal%20leeches%2C%20containers%2C%20tools%20and%20instructions%2C%20medical%20grade%20equipment%2C%20healthcare%20treatment%20supplies%2C%20sterile%20clinical%20presentation%2C%20professional%20medical%20setting&width=400&height=300&seq=7&orientation=landscape" alt="Zəli Terapiyası Başlanğıc Dəsti" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Zəli Terapiyası Başlanğıc Dəsti</h3>
+                            <p class="text-gray-600 mb-4">5 ədəd tibbi zəli, saxlama qabı və istifadə təlimatı daxildir.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-primary">85 AZN / dəst</span>
+                                <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 cursor-pointer">Səbətə əlavə et</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Specialized%20leech%20storage%20container%2C%20professional%20medical%20equipment%20for%20storing%20medicinal%20leeches%2C%20pharmaceutical%20grade%20container%20with%20water%20filtration%20system%2C%20healthcare%20supplies%2C%20sterile%20clinical%20environment%2C%20medical%20grade%20quality&width=400&height=300&seq=8&orientation=landscape" alt="Zəli Saxlama Qabı" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Zəli Saxlama Qabı</h3>
+                            <p class="text-gray-600 mb-4">Xüsusi dizayn edilmiş, havalandırma sistemli professional saxlama qabı.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-primary">45 AZN / ədəd</span>
+                                <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button font-medium transition-all duration-300 cursor-pointer">Səbətə əlavə et</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="py-16 px-4 bg-primary/5">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Haqqımızda</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20medical%20leech%20farm%2C%20specialized%20facility%20for%20breeding%20medicinal%20leeches%2C%20clean%20laboratory%20environment%2C%20pharmaceutical%20grade%20production%2C%20healthcare%20industry%2C%20sterile%20tanks%20with%20water%2C%20scientific%20equipment%2C%20medical%20research%20facility&width=600&height=400&seq=9&orientation=landscape" alt="Azesmed Haqqında" class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4">Azesmed Şirkəti</h3>
+                        <p class="text-gray-700 mb-4">Azesmed 2015-ci ildən Azərbaycanda fəaliyyət göstərən, tibbi zəli yetişdirilməsi və satışı üzrə ixtisaslaşmış şirkətdir. Biz ölkəmizdə hirudoterapiya sahəsinin inkişafına töhfə verməyi hədəfləyirik.</p>
+                        <p class="text-gray-700 mb-4">Şirkətimiz Avropa standartlarına uyğun avadanlıqlarla təchiz edilmiş müasir laboratoriyada fəaliyyət göstərir. Bütün zəlilərimiz xüsusi nəzarət altında yetişdirilir və yüksək keyfiyyət standartlarına cavab verir.</p>
+                        <p class="text-gray-700 mb-6">Bizim komandamız tibb və biologiya sahəsində təcrübəli mütəxəssislərdən ibarətdir. Müştərilərimizə həm məhsul təminatı, həm də professional məsləhət xidməti göstəririk.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="text-primary text-2xl font-bold mb-1">10+</div>
+                                <div class="text-gray-600 text-sm">İl təcrübə</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="text-primary text-2xl font-bold mb-1">1000+</div>
+                                <div class="text-gray-600 text-sm">Müştəri</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="text-primary text-2xl font-bold mb-1">15+</div>
+                                <div class="text-gray-600 text-sm">Mütəxəssis</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="text-primary text-2xl font-bold mb-1">5+</div>
+                                <div class="text-gray-600 text-sm">Sertifikat</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Müştəri Rəyləri</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-primary font-semibold">RH</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Rəşad Həsənov</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Azesmed-dən aldığım tibbi zəlilərin keyfiyyəti həqiqətən çox yüksəkdir. Klinikamızda müalicə prosesində istifadə edirik və nəticələr mükəmməldir. Həmçinin çatdırılma sürəti və müştəri xidməti əla səviyyədədir."</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-primary font-semibold">LM</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Leyla Məmmədova</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Alternativ tibb mütəxəssisi olaraq uzun müddətdir Azesmed ilə əməkdaşlıq edirəm. Onların təqdim etdiyi zəlilərin keyfiyyəti və professional yanaşmaları məni hər zaman məmnun edir. Etibarlı tərəfdaş!"</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-primary font-semibold">FQ</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Fuad Quliyev</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Fizioterapiya mərkəzimiz üçün müntəzəm olaraq Azesmed-dən tibbi zəli sifariş edirik. Həm keyfiyyət, həm qiymət, həm də xidmət baxımından tam məmnunuq. Həmkarlarıma tövsiyə edirəm."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-16 px-4 bg-primary/5">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Əlaqə</h2>
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-semibold mb-6">Sifariş Formu</h3>
+                        <form id="orderForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Ad Soyad</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Telefon</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">E-poçt</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="product" class="block text-gray-700 mb-2">Məhsul</label>
+                                <select id="product" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                                    <option value="">Məhsul seçin</option>
+                                    <option value="standart">Standart Tibbi Zəli</option>
+                                    <option value="premium">Premium Tibbi Zəli</option>
+                                    <option value="mini">Mini Tibbi Zəli</option>
+                                    <option value="bulk">Toplu Tibbi Zəli Paketi</option>
+                                    <option value="starter">Zəli Terapiyası Başlanğıc Dəsti</option>
+                                    <option value="container">Zəli Saxlama Qabı</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="quantity" class="block text-gray-700 mb-2">Miqdar</label>
+                                <input type="number" id="quantity" min="1" value="1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Əlavə qeydlər</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 !rounded-button font-medium transition-all duration-300 cursor-pointer">Sifariş et</button>
+                        </form>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-lg shadow-sm mb-8">
+                            <h3 class="text-2xl font-semibold mb-6">Əlaqə Məlumatları</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Ünvan</h4>
+                                        <p class="text-gray-600">Bakı şəhəri, Nəsimi rayonu, Nizami küçəsi 203B</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                        <i class="ri-phone-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Telefon</h4>
+                                        <p class="text-gray-600">+994 50 123 45 67</p>
+                                        <p class="text-gray-600">+994 12 345 67 89</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                        <i class="ri-mail-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">E-poçt</h4>
+                                        <p class="text-gray-600">info@azesmed.az</p>
+                                        <p class="text-gray-600">sales@azesmed.az</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                        <i class="ri-time-line text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">İş saatları</h4>
+                                        <p class="text-gray-600">Bazar ertəsi - Cümə: 09:00 - 18:00</p>
+                                        <p class="text-gray-600">Şənbə: 10:00 - 15:00</p>
+                                        <p class="text-gray-600">Bazar: İstirahət günü</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h4 class="font-medium mb-3">Sosial şəbəkələr</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                                        <i class="ri-facebook-fill text-primary"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                                        <i class="ri-instagram-line text-primary"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                                        <i class="ri-whatsapp-line text-primary"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                                        <i class="ri-telegram-line text-primary"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm h-64 overflow-hidden">
+                            <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png')"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="font-['Pacifico'] text-white text-2xl mb-4">logo</div>
+                    <p class="text-gray-300 max-w-xs">Azərbaycanda sertifikatlı və keyfiyyətli tibbi zəlilərin rəsmi təchizatçısı</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Səhifələr</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Ana Səhifə</a></li>
+                            <li><a href="#products" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Məhsullar</a></li>
+                            <li><a href="#about" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Haqqımızda</a></li>
+                            <li><a href="#contact" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Əlaqə</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Faydalı</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Hirudoterapiya</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Tez-tez soruşulanlar</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Çatdırılma şərtləri</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 cursor-pointer">Gizlilik siyasəti</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Əlaqə</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="ri-phone-line mr-2"></i>
+                                <span>+994 50 123 45 67</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-mail-line mr-2"></i>
+                                <span>info@azesmed.az</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-map-pin-line mr-2"></i>
+                                <span>Bakı, Nizami küçəsi 203B</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Azesmed. Bütün hüquqlar qorunur.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 cursor-pointer">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 cursor-pointer">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 cursor-pointer">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 cursor-pointer">
+                        <i class="ri-telegram-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Success Modal -->
+    <div id="orderSuccessModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <div class="flex justify-center mb-4">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                    <i class="ri-check-line ri-2x text-green-500"></i>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-2">Sifarişiniz qəbul edildi!</h3>
+            <p class="text-gray-600 text-center mb-6">Tezliklə sizinlə əlaqə saxlanılacaq.</p>
+            <button id="closeModalBtn" class="w-full bg-primary hover:bg-primary/90 text-white py-3 !rounded-button font-medium transition-all duration-300 cursor-pointer">Bağla</button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+    <!-- Smooth Scroll Script -->
+    <script id="smoothScrollScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const navbarHeight = 64; // Adjust based on your navbar height
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Order Form Script -->
+    <script id="orderFormScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderForm = document.getElementById('orderForm');
+            const orderSuccessModal = document.getElementById('orderSuccessModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would normally send the form data to a server
+                // For demo purposes, we'll just show the success modal
+                orderSuccessModal.classList.remove('hidden');
+                
+                // Reset form
+                orderForm.reset();
+            });
+            
+            closeModalBtn.addEventListener('click', function() {
+                orderSuccessModal.classList.add('hidden');
+            });
+            
+            // Close modal when clicking outside
+            orderSuccessModal.addEventListener('click', function(e) {
+                if (e.target === orderSuccessModal) {
+                    orderSuccessModal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
